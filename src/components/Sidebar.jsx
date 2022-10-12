@@ -11,8 +11,8 @@ import { NavLink } from "react-router-dom";
 const Sidebar = ({ children }) => {
   const menuItem = [
     {
-      path: "/",
-      name: "Host",
+      path: "/Dashboard",
+      name: "Dashboard",
       icon: <FaTh />,
     },
     {

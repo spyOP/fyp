@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import { getHosts } from "../services/host";
-class Host extends Component {
+class Dashboard extends Component {
   state = {
     hosts: getHosts(),
   };
@@ -74,4 +74,4 @@ class Host extends Component {
   }
 }
 
-export default Host;
+export default Dashboard;

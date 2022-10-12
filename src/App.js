@@ -2,7 +2,7 @@ import React from "react";
 import "./App.css";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import Sidebar from "./components/Sidebar";
-import Host from "./pages/Host";
+import Dashboard from "./pages/Dashboard";
 import Users from "./pages/Users";
 import Payloads from "./pages/Payloads";
 import Graphs from "./pages/Graphs";
@@ -16,8 +16,8 @@ const App = () => {
       <NavBar />
       <Sidebar>
         <Routes>
-          <Route path="/" element={<Host />} />
-          <Route path="/dashboard" element={<Host />} />
+          <Route path="/" element={<Dashboard />} />
+          <Route path="/Dashboard" element={<Dashboard />} />
           <Route path="/Users" element={<Users />} />
           <Route path="/Payloads" element={<Payloads />} />
           <Route path="/Graphs" element={<Graphs />} />
