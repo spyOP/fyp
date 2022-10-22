@@ -9,6 +9,7 @@ import Graphs from "./pages/Graphs";
 import Tasks from "./pages/Tasks";
 import Guide from "./pages/Guide";
 import NavBar from "./components/navbar";
+import "../node_modules/bootstrap/dist/css/bootstrap.min.css";
 
 const App = () => {
   return (

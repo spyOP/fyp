@@ -1,8 +1,12 @@
 import React, { Component } from "react";
 import { getHosts } from "../services/host";
+import Pagination from "../components/pagination";
+
 class Dashboard extends Component {
   state = {
     hosts: getHosts(),
+    pageSize: 3,
+    currentPage: 1,
   };
 
   handleDelete = (host) => {
@@ -18,7 +22,13 @@ class Dashboard extends Component {
     borderRadius: "50%",
   };
 
+  handlePageChange = (page) => {
+    this.setState({ currentPage: page });
+  };
+
   render() {
+    const { length: count } = this.state.hosts;
+    const { pageSize, currentPage } = this.state;
     return (
       <React.Fragment>
         <div className="table-section">
@@ -79,6 +89,12 @@ class Dashboard extends Component {
             </tbody>
           </table>
         </div>
+        <Pagination
+          itemsCount={count}
+          pageSize={pageSize}
+          currentPage={currentPage}
+          onPageChange={this.handlePageChange}
+        />
       </React.Fragment>
     );
   }

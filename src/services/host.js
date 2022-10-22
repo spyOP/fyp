@@ -43,6 +43,17 @@ const hosts = [
     rating: "3",
     note: "this bot is not for sell",
   },
+  {
+    _id: "5b21ca3fdfdf471819",
+    host_name: "p",
+    user: "myselft",
+    status: "Online",
+    lastCheckIn: "",
+    assigned_to: "Ali",
+    region: "SA",
+    rating: "3",
+    note: "this bot is not for sell",
+  },
 ];
 
 export function getHosts() {
