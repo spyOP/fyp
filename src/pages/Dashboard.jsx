@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import { getHosts } from "../services/host";
 import Pagination from "../components/pagination";
+import { paginate } from "../ulits/paginate";
 
 class Dashboard extends Component {
   state = {
@@ -28,7 +29,8 @@ class Dashboard extends Component {
 
   render() {
     const { length: count } = this.state.hosts;
-    const { pageSize, currentPage } = this.state;
+    const { pageSize, currentPage, hosts: allHosts } = this.state;
+    const hosts = paginate(allHosts, currentPage, pageSize);
     return (
       <React.Fragment>
         <div className="table-section">
@@ -61,7 +63,7 @@ class Dashboard extends Component {
               </tr>
             </thead>
             <tbody>
-              {this.state.hosts.map((host) => (
+              {hosts.map((host) => (
                 <tr key={host._id}>
                   <td>{host.host_name}</td>
                   <td>{host.user}</td>
