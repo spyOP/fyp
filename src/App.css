@@ -3,33 +3,24 @@
   padding: 0;
   text-decoration: none;
 }
-.container {
+
+
+/* Main  */ /* Main  */ /* Main  */
+.lower {
   display: flex;
+  height: 100%;
 }
 main {
   width: 100%;
-  padding: 20px;
 }
 .sidebar {
   background: #000;
   color: #fff;
-  height: 100vh;
   width: 200px;
+  height:86vh;
   transition: all 0.5s;
 }
-.top_section {
-  display: flex;
-  align-items: center;
-  padding: 20px 15px;
-}
-.logo {
-  font-size: 30px;
-}
-.bars {
-  display: flex;
-  font-size: 25px;
-  margin-left: 50px;
-}
+
 .link {
   display: flex;
   color: #fff;
@@ -50,10 +41,42 @@ main {
 .link_text {
   font-size: 20px;
 }
+.top{
+  float: left ;
+  display: flex;
+}
+#buttoon{
+  margin-left:20% ;
+  margin-right:20% ;
+}
 
+table {
+  border-collapse: collapse;
+  min-width: 100%;
+}
+
+thead th {
+  position: sticky;
+  top: 0;
+  background-color: #f6f9fc;
+  color: #8493a5;
+  font-size: 15px;
+}
+
+th,
+td {
+  border-bottom: 1px solid #dddddd;
+  word-break: break-all;
+  text-align: center;
+}
+
+
+
+/* NAV BAR */ /* NAV BAR */ /* NAV BAR */
 .nav {
   background: rgb(31, 31, 31);
   color: white;
+  width: 100%;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -67,7 +90,6 @@ main {
 }
 
 .nav ul {
-  padding: 0;
   margin: 0;
   list-style: none;
   display: flex;
@@ -84,38 +106,7 @@ main {
   font-size: 1.5rem;
 }
 
-.nav li:hover {
-  background-color: #777;
-}
-
 .nav li:active {
   background-color: #555;
 }
 
-.table-section {
-  height: 60px;
-  overflow: auto;
-}
-
-table {
-  width: 100%;
-  table-layout: fixed;
-  min-width: 1000px;
-  border-collapse: collapse;
-}
-
-thead th {
-  position: sticky;
-  top: 0;
-  background-color: #f6f9fc;
-  color: #8493a5;
-  font-size: 15px;
-}
-
-th,
-td {
-  border-bottom: 1px solid #dddddd;
-  padding: 10px 20px;
-  word-break: break-all;
-  text-align: center;
-}

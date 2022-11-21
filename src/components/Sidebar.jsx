@@ -42,7 +42,7 @@ const Sidebar = ({ children }) => {
     },
   ];
   return (
-    <div className="container">
+    <div className="lower">
       <div className="sidebar">
         {menuItem.map((item, index) => (
           <NavLink

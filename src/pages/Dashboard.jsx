@@ -33,17 +33,23 @@ class Dashboard extends Component {
     const hosts = paginate(allHosts, currentPage, pageSize);
     return (
       <React.Fragment>
-        <div className="table-section">
+        <div >
           <table>
-            <thead id="top">
-              <tr className="top-1">
-                <th>Search Host</th>
-                <th>Assign Host</th>
-                <th>Generate Report</th>
-                <th>Manage Selected</th>
-                <th>Refresh</th>
-              </tr>
-            </thead>
+            <td>
+              <button className="btn btn-sm" id="buttoon">Search Host</button>
+            </td>
+            <td>
+              <button className="btn btn-sm" id="buttoon">Assign Host</button>
+            </td>
+            <td>
+              <button className="btn btn-sm" id="buttoon">Generate Report</button>
+            </td>
+            <td>
+              <button className="btn btn-sm" id="buttoon">Manage Selected</button>
+            </td>
+            <td>
+              <button className="btn btn-sm" id="buttoon">Refresh <img src="./refresh-icon.webp" width="12" height="12" /></button>
+            </td>
           </table>
         </div>
         <div>
@@ -78,7 +84,7 @@ class Dashboard extends Component {
                       onClick={() => this.handleDelete(host)}
                       className="btn btn-sm"
                     >
-                      <img src="./delete-24.png" />
+                      <img src="./delete-24.png" width="20" height="20" />
                     </button>{" "}
                   </td>
                   <td>
