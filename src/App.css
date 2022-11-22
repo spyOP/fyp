@@ -5,7 +5,7 @@
 }
 
 
-/* Main  */ /* Main  */ /* Main  */
+/* slidebar  */ /* slidebar  */ /* slidebar  */
 .lower {
   display: flex;
   height: 100%;
@@ -14,7 +14,7 @@ main {
   width: 100%;
 }
 .sidebar {
-  background: blue;
+  background: #000;
   color: #fff;
   width: 200px;
   height:86vh;
@@ -55,19 +55,22 @@ table {
   min-width: 100%;
 }
 
-thead th {
-  position: sticky;
-  top: 0;
-  background-color: #f6f9fc;
-  color: #8493a5;
-  font-size: 15px;
+.upper-buttons{
+  text-align: center;
+  word-break: break-all;
+  border-bottom: 1px solid lightgray ;
+}
+.upper-buttons td{
+  padding: 5px;
 }
 
-th,
-td {
-  border-bottom: 1px solid #dddddd;
-  word-break: break-all;
+.main-table{
   text-align: center;
+}
+
+.main-table tr{
+  padding: 100px;
+  border-bottom: 1px solid lightgray ;
 }
 
 
@@ -110,3 +113,8 @@ td {
   background-color: #555;
 }
 
+/* pagination */ /* pagination */ /* pagination */
+.pagination{
+  padding:40px;
+  float: right;
+}

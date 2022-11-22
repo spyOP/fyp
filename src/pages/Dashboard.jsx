@@ -6,7 +6,7 @@ import { paginate } from "../ulits/paginate";
 class Dashboard extends Component {
   state = {
     hosts: getHosts(),
-    pageSize: 3,
+    pageSize: 5,
     currentPage: 1,
   };
 
@@ -34,7 +34,7 @@ class Dashboard extends Component {
     return (
       <React.Fragment>
         <div >
-          <table>
+          <table className="upper-buttons">
             <td>
               <button className="btn btn-sm" id="buttoon">Search Host</button>
             </td>
@@ -53,9 +53,9 @@ class Dashboard extends Component {
           </table>
         </div>
         <div>
-          <table>
-            <thead className="middle">
-              <tr className="middle-1">
+          <table className="main-table">
+            <tbody >
+              <tr>
                 <th>HostName</th>
                 <th>User</th>
                 <th>status</th>
@@ -67,7 +67,7 @@ class Dashboard extends Component {
                 <th></th>
                 <th></th>
               </tr>
-            </thead>
+            </tbody>
             <tbody>
               {hosts.map((host) => (
                 <tr key={host._id}>
@@ -97,7 +97,7 @@ class Dashboard extends Component {
             </tbody>
           </table>
         </div>
-        <Pagination
+        <Pagination className="pagination"
           itemsCount={count}
           pageSize={pageSize}
           currentPage={currentPage}
