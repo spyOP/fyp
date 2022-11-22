@@ -14,7 +14,7 @@ main {
   width: 100%;
 }
 .sidebar {
-  background: #000;
+  background: blue;
   color: #fff;
   width: 200px;
   height:86vh;
