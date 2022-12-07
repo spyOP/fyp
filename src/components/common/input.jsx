@@ -12,7 +12,7 @@ const Input = ({ name, label, value, error, onChange }) => {
         type="text"
         className="form-control"
       />
-      <div className="alert alert-danger"></div>
+      {error && <div className="alert alert-danger">{error}</div>}
     </div>
   );
 };
