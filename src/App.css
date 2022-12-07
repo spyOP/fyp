@@ -4,7 +4,6 @@
   text-decoration: none;
 }
 
-
 /* slidebar  */ /* slidebar  */ /* slidebar  */
 .lower {
   display: flex;
@@ -17,7 +16,7 @@ main {
   background: #000;
   color: #fff;
   width: 200px;
-  height:86vh;
+  height: 86vh;
   transition: all 0.5s;
 }
 
@@ -41,13 +40,13 @@ main {
 .link_text {
   font-size: 20px;
 }
-.top{
-  float: left ;
+.top {
+  float: left;
   display: flex;
 }
-#buttoon{
-  margin-left:20% ;
-  margin-right:20% ;
+#buttoon {
+  margin-left: 20%;
+  margin-right: 20%;
 }
 
 table {
@@ -55,25 +54,23 @@ table {
   min-width: 100%;
 }
 
-.upper-buttons{
+.upper-buttons {
   text-align: center;
   word-break: break-all;
-  border-bottom: 1px solid lightgray ;
+  border-bottom: 1px solid lightgray;
 }
-.upper-buttons td{
+.upper-buttons td {
   padding: 5px;
 }
 
-.main-table{
+.main-table {
   text-align: center;
 }
 
-.main-table tr{
+.main-table tr {
   padding: 100px;
-  border-bottom: 1px solid lightgray ;
+  border-bottom: 1px solid lightgray;
 }
-
-
 
 /* NAV BAR */ /* NAV BAR */ /* NAV BAR */
 .nav {
@@ -114,7 +111,7 @@ table {
 }
 
 /* pagination */ /* pagination */ /* pagination */
-.pagination{
-  padding:40px;
+.pagination {
+  padding: 40px;
   float: right;
 }
