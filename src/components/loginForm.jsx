@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import Input from "./common/input";
+import Joi from "joi-browser";
 
 class LoginForm extends Component {
   state = {
@@ -7,13 +8,19 @@ class LoginForm extends Component {
     errors: {},
   };
 
-  validate = () => {
-    const errors = {};
-    const { account } = this.state;
-    if (account.username.trim() === "") errors.username = "username is req";
-    if (account.password.trim() === "") errors.password = "password is req";
+  schema = {
+    username: Joi.string().required().label("Username"),
+    password: Joi.string().required().label("Password"),
+  };
 
-    return Object.keys(errors).length === 0 ? null : errors;
+  validate = () => {
+    const options = { abortEarly: false };
+    const { error } = Joi.validate(this.state.account, this.schema, options);
+    if (error) return null;
+
+    const errors = {};
+    for (let item of error.details) errors[item.path[0]] = item.message;
+    return errors;
   };
 
   handleSubmit = (e) => {
@@ -25,10 +32,10 @@ class LoginForm extends Component {
 
   validateProperty = ({ name, value }) => {
     if (name === "username") {
-      if (value.trim() === "") return "username is req";
+      if (value.trim() === "") return "username is required";
     }
     if (name === "password") {
-      if (value.trim() === "") return "password is req";
+      if (value.trim() === "") return "password is required";
     }
   };
   handleChange = ({ currentTarget: input }) => {
