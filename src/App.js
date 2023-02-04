@@ -16,7 +16,7 @@ const App = () => {
   return (
     <BrowserRouter>
       <LoginForm />
-      {/* <NavBar />
+       <NavBar />
       <Sidebar>
         <Routes>
           <Route path="/" element={<Dashboard />} />
@@ -27,7 +27,7 @@ const App = () => {
           <Route path="/Tasks" element={<Tasks />} />
           <Route path="/Guide" element={<Guide />} />
         </Routes>
-      </Sidebar> */}
+      </Sidebar> 
     </BrowserRouter>
   );
 };
