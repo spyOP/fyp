@@ -2,6 +2,8 @@ import React, { Component } from "react";
 import "./App.css";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import axios from "axios";
+import { ToastContainer } from "react-toastify";
+import "react-toastify/dist/react-toastify.css";
 //import Sidebar from "./components/Sidebar";
 // import Dashboard from "./pages/Dashboard";
 // import Users from "./pages/Users";
@@ -11,29 +13,43 @@ import axios from "axios";
 // import Guide from "./pages/Guide";
 //import NavBar from "./components/navbar";
 //import LoginForm from "./components/loginForm";
+import config from "./config.json";
 import "../node_modules/bootstrap/dist/css/bootstrap.min.css";
 
-const apiEndpoint = "https://jsonplaceholder.typicode.com/posts";
+axios.interceptors.response.use(null, (error) => {
+  const expectedError =
+    error.response &&
+    error.response.status >= 400 &&
+    error.respone.status < 500;
+
+  if (!expectedError) {
+    console.log("Logging Error", error);
+    alert("An unexpected error occurred");
+  }
+
+  return Promise.reject(error);
+});
+
 class App extends Component {
   state = {
     posts: [],
   };
 
   async componentDidMount() {
-    const { data: posts } = await axios.get(apiEndpoint);
+    const { data: posts } = await axios.get(config.apiEndPoint);
     this.setState({ posts });
   }
 
   handleAdd = async () => {
     const obj = { title: "a", body: "b" };
-    const { data: post } = await axios.post(apiEndpoint, obj);
+    const { data: post } = await axios.post(config.apiEndPoint, obj);
     const posts = [post, ...this.state.posts];
     this.setState({ posts });
   };
 
   handleUpdate = async (post) => {
     post.title = "UPDATED";
-    const { data } = await axios.put(apiEndpoint + "/" + post.id, post);
+    const { data } = await axios.put(config.apiEndPoint + "/" + post.id, post);
 
     const posts = [...this.state.posts];
     const index = posts.indexOf(post);
@@ -46,10 +62,10 @@ class App extends Component {
     const posts = this.state.posts.filter((p) => p.id !== post.id);
     this.setState({ posts });
     try {
-      await axios.delete(apiEndpoint + "/" + post.id);
-      throw new Error("");
+      await axios.delete(config.apiEndPoint + "/" + post.id);
     } catch (ex) {
-      alert("something gone wrong");
+      if (ex.response && ex.response.status === 404)
+        alert("this post has already been deleted.");
       this.setState({ posts: originalPosts });
     }
   };
@@ -57,6 +73,7 @@ class App extends Component {
   render() {
     return (
       <React.Fragment>
+        <ToastContainer></ToastContainer>
         <button className="btn btn-primary" onClick={this.handleAdd}>
           Add
         </button>
