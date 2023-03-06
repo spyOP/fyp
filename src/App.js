@@ -66,7 +66,7 @@ class App extends Component {
         <table className="table">
           <thead>
             <tr>
-              <th>Title</th>
+              <th>Tite</th>
               <th>Update</th>
               <th>Delete</th>
             </tr>
