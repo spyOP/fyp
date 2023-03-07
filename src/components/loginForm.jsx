@@ -21,8 +21,13 @@ class LoginForm extends Form {
 
   render() {
     return (
-      <div>
-        <h1>Login</h1>
+      <div className="loginInputs" background-color="blue">
+        <img
+          className="loginLogo"
+          src="./logo.png"
+          width="180"
+          border-radius=" 50% "
+        />
         <form onSubmit={this.handleSubmit}>
           {this.renderInput("username", "Username")}
           {this.renderInput("password", "Password", "password")}

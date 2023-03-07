@@ -59,6 +59,7 @@ class Form extends Component {
 
     return (
       <Input
+        className="inputs"
         type={type}
         name={name}
         value={data[name]}

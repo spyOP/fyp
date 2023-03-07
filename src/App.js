@@ -4,15 +4,15 @@ import { BrowserRouter, Route, Routes } from "react-router-dom";
 import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import http from "./services/httpService";
-//import Sidebar from "./components/Sidebar";
-// import Dashboard from "./pages/Dashboard";
-// import Users from "./pages/Users";
-// import Payloads from "./pages/Payloads";
-// import Graphs from "./pages/Graphs";
-// import Tasks from "./pages/Tasks";
-// import Guide from "./pages/Guide";
-//import NavBar from "./components/navbar";
-//import LoginForm from "./components/loginForm";
+import Sidebar from "./components/Sidebar";
+import Dashboard from "./pages/Dashboard";
+import Users from "./pages/Users";
+import Payloads from "./pages/Payloads";
+import Graphs from "./pages/Graphs";
+import Tasks from "./pages/Tasks";
+import Guide from "./pages/Guide";
+import NavBar from "./components/navbar";
+import LoginForm from "./components/loginForm";
 import config from "./config.json";
 import "../node_modules/bootstrap/dist/css/bootstrap.min.css";
 
@@ -58,61 +58,21 @@ class App extends Component {
 
   render() {
     return (
-      <React.Fragment>
-        <ToastContainer />
-        <button className="btn btn-primary" onClick={this.handleAdd}>
-          Add
-        </button>
-        <table className="table">
-          <thead>
-            <tr>
-              <th>Tite</th>
-              <th>Update</th>
-              <th>Delete</th>
-            </tr>
-          </thead>
-          <tbody>
-            {this.state.posts.map((post) => (
-              <tr key={post.id}>
-                <td>{post.title}</td>
-                <td>
-                  <button
-                    className="btn btn-info btn-sm"
-                    onClick={() => this.handleUpdate(post)}
-                  >
-                    Update
-                  </button>
-                </td>
-                <td>
-                  <button
-                    className="btn btn-danger btn-sm"
-                    onClick={() => this.handleDelete(post)}
-                  >
-                    Delete
-                  </button>
-                </td>
-              </tr>
-            ))}
-          </tbody>
-        </table>
-      </React.Fragment>
-
-      //============================================
-      // <BrowserRouter>
-      //   <LoginForm />
-      //   <NavBar />
-      //  <Sidebar>
-      //   <Routes>
-      //     <Route path="/" element={<Dashboard />} />
-      //     <Route path="/Dashboard" element={<Dashboard />} />
-      //     <Route path="/Users" element={<Users />} />
-      //     <Route path="/Payloads" element={<Payloads />} />
-      //     <Route path="/Graphs" element={<Graphs />} />
-      //     <Route path="/Tasks" element={<Tasks />} />
-      //     <Route path="/Guide" element={<Guide />} />
-      //   </Routes>
-      // </Sidebar>
-      // </BrowserRouter>
+      <BrowserRouter>
+        <LoginForm />
+        {/* <NavBar />
+        <Sidebar>
+          <Routes>
+            <Route path="/" element={<Dashboard />} />
+            <Route path="/Dashboard" element={<Dashboard />} />
+            <Route path="/Users" element={<Users />} />
+            <Route path="/Payloads" element={<Payloads />} />
+            <Route path="/Graphs" element={<Graphs />} />
+            <Route path="/Tasks" element={<Tasks />} />
+            <Route path="/Guide" element={<Guide />} />
+          </Routes>
+        </Sidebar> */}
+      </BrowserRouter>
     );
   }
 }

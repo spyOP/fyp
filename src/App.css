@@ -115,3 +115,21 @@ table {
   padding: 40px;
   float: right;
 }
+
+.loginInputs {
+  background-color: gray;
+  text-align: center;
+  margin: 0px;
+  height: 100vh;
+  padding-top: 10%;
+  padding-left: 40%;
+  padding-right: 40%;
+}
+
+.loginLogo {
+  padding-bottom: 50px;
+}
+
+.inputs {
+  padding: 100%;
+}

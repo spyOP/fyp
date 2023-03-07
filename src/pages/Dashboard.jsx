@@ -33,28 +33,38 @@ class Dashboard extends Component {
     const hosts = paginate(allHosts, currentPage, pageSize);
     return (
       <React.Fragment>
-        <div >
+        <div>
           <table className="upper-buttons">
             <td>
-              <button className="btn btn-sm" id="buttoon">Search Host</button>
+              <button className="btn btn-sm" id="buttoon">
+                Search Host
+              </button>
             </td>
             <td>
-              <button className="btn btn-sm" id="buttoon">Assign Host</button>
+              <button className="btn btn-sm" id="buttoon">
+                Assign Host
+              </button>
             </td>
             <td>
-              <button className="btn btn-sm" id="buttoon">Generate Report</button>
+              <button className="btn btn-sm" id="buttoon">
+                Generate Report
+              </button>
             </td>
             <td>
-              <button className="btn btn-sm" id="buttoon">Manage Selected</button>
+              <button className="btn btn-sm" id="buttoon">
+                Manage Selected
+              </button>
             </td>
             <td>
-              <button className="btn btn-sm" id="buttoon">Refresh <img src="./refresh-icon.webp" width="12" height="12" /></button>
+              <button className="btn btn-sm" id="buttoon">
+                Refresh <img src="./refresh-icon.webp" width="12" height="12" />
+              </button>
             </td>
           </table>
         </div>
         <div>
           <table className="main-table">
-            <tbody >
+            <tbody>
               <tr>
                 <th>HostName</th>
                 <th>User</th>
@@ -97,7 +107,8 @@ class Dashboard extends Component {
             </tbody>
           </table>
         </div>
-        <Pagination className="pagination"
+        <Pagination
+          className="pagination"
           itemsCount={count}
           pageSize={pageSize}
           currentPage={currentPage}
