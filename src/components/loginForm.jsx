@@ -21,19 +21,26 @@ class LoginForm extends Form {
 
   render() {
     return (
-      <div className="loginInputs" background-color="blue">
-        <img
-          className="loginLogo"
-          src="./logo.png"
-          width="180"
-          border-radius=" 50% "
-        />
-        <form onSubmit={this.handleSubmit}>
-          {this.renderInput("username", "Username")}
-          {this.renderInput("password", "Password", "password")}
-          {this.renderButton("Login")}
-        </form>
-      </div>
+      <React.Fragment>
+        <div class="login-page">
+          <div class="form">
+            <div class="login">
+              <div class="login-header">
+                <h3>LOGIN</h3>
+                <p>Please enter your credentials to login.</p>
+              </div>
+            </div>
+            <form className="login-form" onSubmit={this.handleSubmit}>
+              {this.renderInput("username", "Username")}
+              {this.renderInput("password", "Password", "password")}
+              {this.renderButton("Login")}
+              <p class="message">
+                Not registered? <a href="#">Create an account</a>
+              </p>
+            </form>
+          </div>
+        </div>
+      </React.Fragment>
     );
   }
 }
