@@ -28,7 +28,7 @@ class LoginForm extends Form {
               <div class="login-header">
                 <div class="circle"></div>
                 <img src="logo.png" />
-                <p id="first">Please enter your credentials to login.</p>
+                <p id="first">Please enter your credentials</p>
               </div>
             </div>
             <form className="login-form" onSubmit={this.handleSubmit}>

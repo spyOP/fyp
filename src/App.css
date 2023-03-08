@@ -137,6 +137,7 @@ header a img {
   margin-bottom: 15px;
 }
 .form {
+  border-radius: 2%;
   position: relative;
   z-index: 1;
   background: #ffffff;
