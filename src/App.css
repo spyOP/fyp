@@ -196,3 +196,26 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
+
+img {
+  position: relative;
+  display: block;
+  margin: 0 auto;
+  width: 160px;
+  height: 100px;
+}
+
+.circle {
+  position: absolute;
+  width: 100px;
+  height: 100px;
+  background-color: #252525;
+  border-radius: 50%;
+  z-index: -1;
+  margin-left: 80px;
+  padding: 60px;
+}
+
+#first {
+  padding-top: 50px;
+}
