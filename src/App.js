@@ -15,6 +15,7 @@ import NavBar from "./components/navbar";
 import LoginForm from "./components/loginForm";
 import config from "./config.json";
 import "../node_modules/bootstrap/dist/css/bootstrap.min.css";
+import RegisterForm from "./components/registerForm";
 
 class App extends Component {
   state = {
@@ -22,20 +23,20 @@ class App extends Component {
   };
 
   async componentDidMount() {
-    const { data: posts } = await http.get(config.apiEndPoint);
+    const { data: posts } = await http.get(config.apiEndpoint);
     this.setState({ posts });
   }
 
   handleAdd = async () => {
     const obj = { title: "a", body: "b" };
-    const { data: post } = await http.post(config.apiEndPoint, obj);
+    const { data: post } = await http.post(config.apiEndpoint, obj);
     const posts = [post, ...this.state.posts];
     this.setState({ posts });
   };
 
   handleUpdate = async (post) => {
     post.title = "UPDATED";
-    const { data } = await http.put(config.apiEndPoint + "/" + post.id, post);
+    const { data } = await http.put(config.apiEndpoint + "/" + post.id, post);
 
     const posts = [...this.state.posts];
     const index = posts.indexOf(post);
@@ -48,7 +49,7 @@ class App extends Component {
     const posts = this.state.posts.filter((p) => p.id !== post.id);
     this.setState({ posts });
     try {
-      await http.delete("s" + config.apiEndPoint + "/" + post.id);
+      await http.delete("s" + config.apiEndpoint + "/" + post.id);
     } catch (ex) {
       if (ex.response && ex.response.status === 404)
         alert("this post has already been deleted.");
@@ -59,7 +60,7 @@ class App extends Component {
   render() {
     return (
       <BrowserRouter>
-        <LoginForm />
+        <RegisterForm />
         {/* <NavBar />
         <Sidebar>
           <Routes>
