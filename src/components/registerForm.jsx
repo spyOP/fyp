@@ -10,13 +10,21 @@ class RegisterForm extends Form {
   };
 
   schema = {
-    username: Joi.string().required().email().label("Username"),
+    username: Joi.string().required().label("Username"),
     password: Joi.string().required().min(5).label("Password"),
     name: Joi.string().required().label("Name"),
   };
 
   doSubmit = async () => {
-    await userService.register(this.state.data);
+    try {
+      await userService.register(this.state.data);
+    } catch (ex) {
+      if (ex.response && ex.response.status === 400) {
+        const errors = { ...this.state.errors };
+        errors.username = ex.response.data;
+        this.setState({ errors });
+      }
+    }
   };
 
   render() {
@@ -26,7 +34,8 @@ class RegisterForm extends Form {
         <form onSubmit={this.handleSubmit}>
           {this.renderInput("username", "Username")}
           {this.renderInput("password", "Password", "password")}
-          {this.renderInput("name", "Name")}
+          {this.renderInput("password", "confirm password", "password")}
+          {this.renderInput("name", "Team Password")}
           {this.renderButton("Register")}
         </form>
       </div>
