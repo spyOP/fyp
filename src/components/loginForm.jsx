@@ -1,9 +1,9 @@
 import React, { Component } from "react";
-import Input from "./common/input";
+//import Input from "./common/input";
 import Joi from "joi-browser";
 import Form from "./common/form";
-import { login } from "../services/authService";
-import Cookies from "js-cookie";
+import * as authService from "../services/authService";
+//import Cookies from "js-cookie";
 
 class LoginForm extends Form {
   state = {
@@ -13,26 +13,15 @@ class LoginForm extends Form {
 
   schema = {
     username: Joi.string().required().label("Username"),
-    password: Joi.string().required().min(5).label("Password"),
+    password: Joi.string().required().min(3).label("Password"),
     team_password: Joi.string().required().min(8).label("Password"),
   };
 
   doSubmit = async () => {
     try {
-      const { data } = this.state;
-      const { data: res } = await login(
-        data.username,
-        data.password,
-        data.team_password
-      );
-      const authToken = Cookies.get("token");
-      localStorage.setItem("authToken", authToken);
+      await authService.login(this.state.data);
     } catch (ex) {
-      if (ex.response && ex.response.status === 400) {
-        const errors = { ...this.state.errors };
-        errors.username = ex.response.data;
-        this.setState({ errors });
-      }
+      alert(ex.response.data.msg);
     }
   };
 

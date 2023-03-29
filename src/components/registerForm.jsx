@@ -8,6 +8,7 @@ class RegisterForm extends Form {
     data: {
       username: "",
       password: "",
+      email: "",
       confirm_password: "",
       team_password: "",
     },
@@ -17,22 +18,17 @@ class RegisterForm extends Form {
   schema = {
     username: Joi.string().required().label("Username"),
     password: Joi.string().required().min(5).label("Password"),
+    email: Joi.string().required().min(5).label("Password"),
     confirm_password: Joi.string().required().min(5).label("Confirm Password"),
     team_password: Joi.string().required().label("Team Password"),
   };
 
   doSubmit = async () => {
-    console.log("submitted");
     try {
       const { data: res } = await userService.register(this.state.data);
       alert(res.msg);
     } catch (ex) {
-      if (ex.response && ex.response.status !== 200) {
-        console.log("not submitted");
-        const errors = { ...this.state.errors };
-        errors.username = ex.response;
-        this.setState({ errors });
-      }
+      alert(ex.response.data.msg);
     }
   };
 
@@ -42,9 +38,10 @@ class RegisterForm extends Form {
         <h1>Register</h1>
         <form onSubmit={this.handleSubmit}>
           {this.renderInput("username", "Username")}
+          {this.renderInput("email", "Email")}
           {this.renderInput("password", "Password", "password")}
           {this.renderInput("confirm_password", "Confirm password", "password")}
-          {this.renderInput("team_password", "Team Password")}
+          {this.renderInput("team_password", "Team Password", "password")}
           {this.renderButton("Register")}
         </form>
       </div>
