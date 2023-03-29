@@ -1,17 +1,17 @@
 import React, { Component } from "react";
 import "./App.css";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
-import { ToastContainer } from "react-toastify";
+//import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import http from "./services/httpService";
-import Sidebar from "./components/Sidebar";
-import Dashboard from "./pages/Dashboard";
-import Users from "./pages/Users";
-import Payloads from "./pages/Payloads";
-import Graphs from "./pages/Graphs";
-import Tasks from "./pages/Tasks";
-import Guide from "./pages/Guide";
-import NavBar from "./components/navbar";
+//import Sidebar from "./components/Sidebar";
+//import Dashboard from "./pages/Dashboard";
+//import Users from "./pages/Users";
+//import Payloads from "./pages/Payloads";
+//import Graphs from "./pages/Graphs";
+//import Tasks from "./pages/Tasks";
+//import Guide from "./pages/Guide";
+//import NavBar from "./components/navbar";
 import LoginForm from "./components/loginForm";
 import config from "./config.json";
 import "../node_modules/bootstrap/dist/css/bootstrap.min.css";
@@ -61,7 +61,9 @@ class App extends Component {
     return (
       <BrowserRouter>
         <RegisterForm />
-        {/* <NavBar />
+        <LoginForm />
+        {/*
+        <NavBar />
         <Sidebar>
           <Routes>
             <Route path="/" element={<Dashboard />} />
