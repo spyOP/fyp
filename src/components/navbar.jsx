@@ -1,5 +1,6 @@
 import React, { Component } from "react";
-const NavBar = () => {
+import { Link, NavLink } from "react-router-dom";
+const NavBar = ({ user }) => {
   return (
     <nav className="nav">
       <a className="navbar-brand">
@@ -9,10 +10,22 @@ const NavBar = () => {
       </a>
       <ul>
         <li>
-          <a href="#">Welcome User_1</a>
-        </li>
-        <li>
-          <a href="#">Logout</a>
+          {!user && (
+            <React.Fragment>
+              <NavLink className="nav-item nav-link" to="/login">
+                Login
+              </NavLink>
+              <NavLink className="nav-item nav-link" to="/register">
+                Register
+              </NavLink>
+            </React.Fragment>
+          )}
+          {user && (
+            <React.Fragment>
+              <NavLink to="/dashboard">{user.sub}</NavLink>
+              <NavLink to="/logout">Logout</NavLink>
+            </React.Fragment>
+          )}
         </li>
       </ul>
     </nav>

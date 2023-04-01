@@ -6,10 +6,5 @@ import logger from "./services/logService";
 
 logger.init();
 
-ReactDOM.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>,
-  document.getElementById("root")
-);
+ReactDOM.render(<App />, document.getElementById("root"));
 reportWebVitals();
