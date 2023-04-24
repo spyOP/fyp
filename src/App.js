@@ -14,11 +14,10 @@ import Guide from "./pages/Guide";
 import config from "./config.json";
 import RegisterForm from "./components/registerForm";
 import auth from "./services/authService";
-
 import NavBar from "./components/navbar";
 import LoginForm from "./components/loginForm";
 import Logout from "./components/logout";
-import HomePage from "./pages/HomePage";
+import LandingPage from "./pages/landing_page";
 import "./App.css";
 import "../node_modules/bootstrap/dist/css/bootstrap.min.css";
 
@@ -33,7 +32,8 @@ class App extends Component {
     return (
       <BrowserRouter>
         <ToastContainer />
-        <NavBar user={this.state.user} />
+        {/* <NavBar user={this.state.user} /> */}
+        <LandingPage/>
         <main className="container">
           <Routes>
             <Route path="/register" element={<RegisterForm />} />
