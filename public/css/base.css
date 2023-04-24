@@ -1,26 +1,3 @@
-/* =================================================================== 
- *
- *  Dazzle v1.0 Base Stylesheet
- *  04-27-2017
- *  ------------------------------------------------------------------
- *
- *  TOC:
- *  01. reset 
- *  02. basic/base setup styles
- *  03. grid
- *  04. block grids
- *  05. MISC
- *
- * =================================================================== */
-
-
-/* ===================================================================
- *  01. reset  
- *  normalize.css v5.0.0 | MIT License | 
- *  github.com/necolas/normalize.css
- *
- * ------------------------------------------------------------------- */
-
 html {
   font-family: sans-serif;
   line-height: 1.15;
@@ -261,7 +238,6 @@ template {
   display: none;
 }
 
-
 /* ===================================================================
  *  02. basic/base setup styles - (_basic.scss)
  *
@@ -294,7 +270,6 @@ button {
   -webkit-font-smoothing: antialiased;
 }
 
-
 /* ------------------------------------------------------------------- 
  * Media - (_basic.scss)
  * ------------------------------------------------------------------- */
@@ -305,17 +280,39 @@ video {
   height: auto;
 }
 
-
 /* ------------------------------------------------------------------- 
  * Typography resets - (_basic.scss)
  * ------------------------------------------------------------------- */
 
-div, dl, dt, dd, ul, ol, li, h1, h2, h3, h4, h5, h6, pre, form, p, blockquote, th, td {
+div,
+dl,
+dt,
+dd,
+ul,
+ol,
+li,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+pre,
+form,
+p,
+blockquote,
+th,
+td {
   margin: 0;
   padding: 0;
 }
 
-h1, h2, h3, h4, h5, h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
   -webkit-font-variant-ligatures: common-ligatures;
   -moz-font-variant-ligatures: common-ligatures;
   font-variant-ligatures: common-ligatures;
@@ -348,7 +345,6 @@ li {
   display: block;
 }
 
-
 /* ------------------------------------------------------------------- 
  * links - (_basic.scss)
  * ------------------------------------------------------------------- */
@@ -361,7 +357,6 @@ a {
 a img {
   border: none;
 }
-
 
 /* ------------------------------------------------------------------- 
  * inputs - (_basic.scss)
@@ -386,7 +381,6 @@ textarea {
   -o-appearance: none;
   appearance: none;
 }
-
 
 /* ===================================================================
  *  03. grid - (_grid.scss)
@@ -417,7 +411,7 @@ textarea {
   float: left;
 }
 
-[class*="col-"]+[class*="col-"].end {
+[class*="col-"] + [class*="col-"].end {
   float: right;
 }
 
@@ -481,7 +475,6 @@ textarea {
   width: 100%;
 }
 
-
 /* ------------------------------------------------------------------- 
  * medium size devices - (_grid.scss)
  * ------------------------------------------------------------------- */
@@ -540,7 +533,6 @@ textarea {
   }
 }
 
-
 /* ------------------------------------------------------------------- 
  * tablets - (_grid.scss)
  * ------------------------------------------------------------------- */
@@ -580,7 +572,6 @@ textarea {
   }
 }
 
-
 /* ------------------------------------------------------------------- 
  *  mobile devices - (_grid.scss)
  * ------------------------------------------------------------------- */
@@ -617,7 +608,6 @@ textarea {
   }
 }
 
-
 /* ------------------------------------------------------------------- 
  * small mobile devices - (_grid.scss)
  * ------------------------------------------------------------------- */
@@ -637,11 +627,10 @@ textarea {
     margin-right: 0;
     padding: 0;
   }
-  [class*="col-"]+[class*="col-"].end {
+  [class*="col-"] + [class*="col-"].end {
     float: none;
   }
 }
-
 
 /* ===================================================================
  *  04. block grids - (_grid.scss)
@@ -674,20 +663,18 @@ textarea {
   width: 50%;
 }
 
-
 /**
  * Clearing for block grid columns. Allow columns with 
  * different heights to align properly.
  */
 
-.block-1-6 .bgrid:nth-child(6n+1),
-.block-1-5 .bgrid:nth-child(5n+1),
-.block-1-4 .bgrid:nth-child(4n+1),
-.block-1-3 .bgrid:nth-child(3n+1),
-.block-1-2 .bgrid:nth-child(2n+1) {
+.block-1-6 .bgrid:nth-child(6n + 1),
+.block-1-5 .bgrid:nth-child(5n + 1),
+.block-1-4 .bgrid:nth-child(4n + 1),
+.block-1-3 .bgrid:nth-child(3n + 1),
+.block-1-2 .bgrid:nth-child(2n + 1) {
   clear: both;
 }
-
 
 /* ------------------------------------------------------------------- 
  * medium size devices - (_grid.scss)
@@ -716,15 +703,14 @@ textarea {
   [class*="block-m-"] .bgrid:nth-child(n) {
     clear: none;
   }
-  .block-m-1-6 .bgrid:nth-child(6n+1),
-  .block-m-1-5 .bgrid:nth-child(5n+1),
-  .block-m-1-4 .bgrid:nth-child(4n+1),
-  .block-m-1-3 .bgrid:nth-child(3n+1),
-  .block-m-1-2 .bgrid:nth-child(2n+1) {
+  .block-m-1-6 .bgrid:nth-child(6n + 1),
+  .block-m-1-5 .bgrid:nth-child(5n + 1),
+  .block-m-1-4 .bgrid:nth-child(4n + 1),
+  .block-m-1-3 .bgrid:nth-child(3n + 1),
+  .block-m-1-2 .bgrid:nth-child(2n + 1) {
     clear: both;
   }
 }
-
 
 /* ------------------------------------------------------------------- 
  * tablets - (_grid.scss)
@@ -753,15 +739,14 @@ textarea {
   [class*="block-tab-"] .bgrid:nth-child(n) {
     clear: none;
   }
-  .block-tab-1-6 .bgrid:nth-child(6n+1),
-  .block-tab-1-6 .bgrid:nth-child(5n+1),
-  .block-tab-1-4 .bgrid:nth-child(4n+1),
-  .block-tab-1-3 .bgrid:nth-child(3n+1),
-  .block-tab-1-2 .bgrid:nth-child(2n+1) {
+  .block-tab-1-6 .bgrid:nth-child(6n + 1),
+  .block-tab-1-6 .bgrid:nth-child(5n + 1),
+  .block-tab-1-4 .bgrid:nth-child(4n + 1),
+  .block-tab-1-3 .bgrid:nth-child(3n + 1),
+  .block-tab-1-2 .bgrid:nth-child(2n + 1) {
     clear: both;
   }
 }
-
 
 /* ------------------------------------------------------------------- 
  * mobile devices - (_grid.scss)
@@ -790,15 +775,14 @@ textarea {
   [class*="block-mob-"] .bgrid:nth-child(n) {
     clear: none;
   }
-  .block-mob-1-6 .bgrid:nth-child(6n+1),
-  .block-mob-1-5 .bgrid:nth-child(5n+1),
-  .block-mob-1-4 .bgrid:nth-child(4n+1),
-  .block-mob-1-3 .bgrid:nth-child(3n+1),
-  .block-mob-1-2 .bgrid:nth-child(2n+1) {
+  .block-mob-1-6 .bgrid:nth-child(6n + 1),
+  .block-mob-1-5 .bgrid:nth-child(5n + 1),
+  .block-mob-1-4 .bgrid:nth-child(4n + 1),
+  .block-mob-1-3 .bgrid:nth-child(3n + 1),
+  .block-mob-1-2 .bgrid:nth-child(2n + 1) {
     clear: both;
   }
 }
-
 
 /* ------------------------------------------------------------------- 
  * stack on small mobile devices - (_grid.scss)
@@ -814,7 +798,6 @@ textarea {
   }
 }
 
-
 /* ===================================================================
  *  05. MISC  - (_grid.scss)
  *
@@ -825,7 +808,6 @@ textarea {
   display: table;
   clear: both;
 }
-
 
 /* Misc Helper Styles */
 
@@ -891,6 +873,5 @@ textarea {
   margin-right: auto;
   text-align: center;
 }
-
 
 /*# sourceMappingURL=base.css.map */

@@ -33,15 +33,13 @@ class App extends Component {
       <BrowserRouter>
         <ToastContainer />
         {/* <NavBar user={this.state.user} /> */}
-        <LandingPage/>
-        <main className="container">
-          <Routes>
-            <Route path="/register" element={<RegisterForm />} />
-            <Route path="/login" element={<LoginForm />} />
-            <Route path="/dashboard" element={<Dashboard />} />
-            <Route path="/logout" element={<Logout />} />
-          </Routes>
-        </main>
+        <Routes>
+          <Route path="/" element={<LandingPage />} />
+          <Route path="/register" element={<RegisterForm />} />
+          <Route path="/login" element={<LoginForm />} />
+          <Route path="/dashboard" element={<Dashboard />} />
+          <Route path="/logout" element={<Logout />} />
+        </Routes>
       </BrowserRouter>
     );
   }
