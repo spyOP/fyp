@@ -25,11 +25,21 @@ class LandingPage extends Component {
             <link rel="stylesheet" href="/css/base.css" />
             <link rel="stylesheet" href="/css/vendor.css" />
             <link rel="stylesheet" href="/css/main.css" />
-            <script href="/js/js/modernizr.js"></script>
-            <script src="/js/js/pace.min.js"></script>
-            <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
-            <link rel="icon" href="favicon.ico" type="image/x-icon" />
+
+            <script href="/js/modernizr.js"></script>
+            <script href="/js/pace.min.js"></script>
+            <link
+              rel="/images/shortcut icon"
+              href="/images/favicon.ico"
+              type="/image/x-icon"
+            />
+            <link
+              rel="icon"
+              href="/images/favicon.ico"
+              type="/images/image/x-icon"
+            />
           </head>
+
           <body id="top">
             <header id="header" className="row">
               <div className="header-logo">
@@ -72,9 +82,7 @@ class LandingPage extends Component {
             <section
               id="home"
               data-parallax="scroll"
-              data-image-src="images/hero-bg.jpg"
-              data-natural-width="3000"
-              data-natural-height="2000"
+              data-image-src="/images/hero-bg.jpg"
             >
               <div className="overlay"></div>
               <div className="home-content">
@@ -329,11 +337,11 @@ class LandingPage extends Component {
 
               <div className="row about-bottom-image">
                 <img
-                  src="images/app-screens-1200.png"
+                  src="/images/app-screens-1200.png"
                   srcSet="
-            images/app-screens-600.png   600w,
-            images/app-screens-1200.png 1200w,
-            images/app-screens-2800.png 2800w
+            /images/app-screens-600.png   600w,
+            /images/app-screens-1200.png 1200w,
+            /images/app-screens-2800.png 2800w
           "
                   sizes="(max-width: 2800px) 100vw, 2800px"
                   alt="App Screenshots"
@@ -566,9 +574,9 @@ class LandingPage extends Component {
               <div id="loader"></div>
             </div>
 
-            <script src="js/jquery-2.1.3.min.js"></script>
-            <script src="js/plugins.js"></script>
-            <script src="js/main.js"></script>
+            <script src="/js/jquery-2.1.3.min.js"></script>
+            <script src="/js/plugins.js"></script>
+            <script src="/js/main.js"></script>
           </body>
         </html>
       </React.Fragment>

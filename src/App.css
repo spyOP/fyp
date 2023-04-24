@@ -1,0 +1,224 @@
+* {
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+}
+
+/* slidebar  */ /* slidebar  */ /* slidebar  */
+.lower {
+  display: flex;
+  height: 100%;
+}
+main {
+  width: 100%;
+}
+.sidebar {
+  background: #000;
+  color: #fff;
+  width: 200px;
+  height: 86vh;
+  transition: all 0.5s;
+}
+
+.link {
+  display: flex;
+  color: #fff;
+  padding: 10px 15px;
+  gap: 15px;
+  transition: all 0.5s;
+}
+.link:hover {
+  background: lightskyblue;
+  color: #000;
+  transition: all 0.5s;
+}
+.active {
+  background: lightskyblue;
+  color: #000;
+}
+.icon,
+.link_text {
+  font-size: 20px;
+}
+.top {
+  float: left;
+  display: flex;
+}
+#buttoon {
+  margin-left: 20%;
+  margin-right: 20%;
+}
+
+table {
+  border-collapse: collapse;
+  min-width: 100%;
+}
+
+.upper-buttons {
+  text-align: center;
+  word-break: break-all;
+  border-bottom: 1px solid lightgray;
+}
+.upper-buttons td {
+  padding: 5px;
+}
+
+.main-table {
+  text-align: center;
+}
+
+.main-table tr {
+  padding: 100px;
+  border-bottom: 1px solid lightgray;
+}
+
+/* NAV BAR */ /* NAV BAR */ /* NAV BAR */
+.nav {
+  background: rgb(31, 31, 31);
+  color: white;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 2rem;
+  padding: 0 1rem;
+}
+
+.logo-image img {
+  width: 170px;
+  height: 100px;
+}
+
+.nav ul {
+  margin: 0;
+  list-style: none;
+  display: flex;
+  gap: 3rem;
+}
+
+.nav a {
+  color: inherit;
+  text-decoration: none;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  padding: 0.25rem;
+  font-size: 1.5rem;
+}
+
+.nav li:active {
+  background-color: #555;
+}
+
+/* pagination */ /* pagination */ /* pagination */
+.pagination {
+  padding: 40px;
+  float: right;
+}
+
+/* login page */
+
+@import url(https://fonts.googleapis.com/css?family=Roboto:300);
+header .header {
+  background-color: #fff;
+  height: 45px;
+}
+header a img {
+  width: 134px;
+  margin-top: 4px;
+}
+.login-page {
+  width: 360px;
+  padding: 6.5% 0 0;
+  margin: auto;
+}
+.login-page .form .login {
+  margin-top: -20px;
+  margin-bottom: 15px;
+}
+.form {
+  border-radius: 2%;
+  position: relative;
+  z-index: 1;
+  background: #ffffff;
+  max-width: 360px;
+  margin: 0 auto 100px;
+  padding: 45px;
+  text-align: center;
+  box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24);
+}
+.form input {
+  font-family: "Roboto", sans-serif;
+  outline: 0;
+  background: #f2f2f2;
+  width: 100%;
+  border: 0;
+  margin: 0 0 15px;
+  padding: 15px;
+  box-sizing: border-box;
+  font-size: 14px;
+  margin-top: -20px;
+}
+.form button {
+  font-family: "Roboto", sans-serif;
+  text-transform: uppercase;
+  outline: 0;
+  background-color: #2e2e2e;
+  background-image: linear-gradient(45deg, #242424, #000000);
+  width: 100%;
+  border: 0;
+  padding-top: 15px;
+  padding: 15px;
+  color: #ffffff;
+  font-size: 14px;
+  -webkit-transition: all 0.3 ease;
+  transition: all 0.3 ease;
+  cursor: pointer;
+}
+.form .message {
+  margin: 15px 0 0;
+  color: #b3b3b3;
+  font-size: 12px;
+}
+.form .message a {
+  color: #5c5c5c;
+  text-decoration: none;
+}
+
+.container {
+  position: relative;
+  z-index: 1;
+  max-width: 300px;
+  margin: 0 auto;
+}
+
+body {
+  background-color: #000000;
+  background-image: linear-gradient(45deg, #313131, #1d1616);
+  font-family: "Roboto", sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+img {
+  position: relative;
+  display: block;
+  margin: 0 auto;
+  width: 160px;
+  height: 100px;
+}
+
+.circle {
+  position: absolute;
+  width: 100px;
+  height: 100px;
+  background-color: #252525;
+  border-radius: 50%;
+  z-index: -1;
+  margin-left: 80px;
+  padding: 60px;
+}
+
+#first {
+  padding-top: 50px;
+}
