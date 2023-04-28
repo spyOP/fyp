@@ -20,10 +20,13 @@ import Logout from "./components/logout";
 import LandingPage from "./pages/landing_page";
 import "./App.css";
 import "../node_modules/bootstrap/dist/css/bootstrap.min.css";
+import AOS from "aos";
+import "aos/dist/aos.css";
 
 class App extends Component {
   state = {};
   componentDidMount() {
+    AOS.init();
     const user = auth.getCurrentUser();
     this.setState({ user });
   }
